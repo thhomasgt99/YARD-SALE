@@ -6,7 +6,7 @@
 	- Manejo de rutas, tales como; home, login, password-recovery, send-email, new-password, entre otras.
 	- Acumulacion de pedidos y suma del total.
 	- Añadir, borrar y conteo de los productos añadidos.
-* YARD-SALE maneja las siguientes tecnologias principales, webpack, babel, sass y varias dependencias.
+* YARD-SALE maneja las siguientes tecnologias principales, react, webpack, babel, sass y varias dependencias.
 * YARD-SALE contiene archivos de configuracion de webpack y babel.
 * YARD-SALE consume un API de prueba para renderizar los productos.
 * YARD-SALE es una aplicacion de multiples rutas montadas con riack-route.
