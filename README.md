@@ -1,4 +1,5 @@
 🛠 En construccion.
+##### En este momento no esta inplementada la integracion continua por ende no esta corriendo en githup-pages
 # `YARD-SALE`
 ### Description
 * YARD-SALE es una e-commerce con las funcionalidades base tipicas de una tienda virtual. Algunas de sus funcionalidades son:
