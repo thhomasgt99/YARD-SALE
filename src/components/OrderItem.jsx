@@ -1,7 +1,7 @@
 import React, {useContext} from 'react';
 import AppContext from '../context/AppContext';
 import '../styles/OrderItem.scss';
-import icon_close from '../assets/icons/icon_close.png'
+import icon_close from '../assets/icons/icon_close.png';
 
 
 const OrderItem = ({product}) => {
