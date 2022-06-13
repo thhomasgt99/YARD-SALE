@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
-import '@styles/Login.scss';
-import logo_yard_sale from '@logos/logo_yard_sale.svg'
+import '../styles/Login.scss';
+import logo_yard_sale from '../assets/logos/logo_yard_sale.svg'
 
 const Login = () => {
 	const form = useRef(null)

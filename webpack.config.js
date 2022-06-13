@@ -7,19 +7,11 @@ module.exports = {
 	output: {
 		path: path.resolve(__dirname, 'dist'),
 		filename: 'bundle.js',
-		// publicPath: './' descomentar para alparecer compile en git, pero aqui no pq el hp no abre en modo desarrollo
+    publicPath: './' //porque ruta arranca |esta linea deve pernanecer comentada en desarrollo local, pero en github debe subirse descomentada
+		//esto porque si esta activa tomo a dist para abrir y esto en local no es como lo devido en produccion SI
 	},
-	mode: 'development',
 	resolve: {
 		extensions: ['.js', '.jsx'],
-		alias: {
-			'@components': path.resolve(__dirname,'src/components/'),
-			'@containers': path.resolve(__dirname,'src/containers/'),
-			'@styles': path.resolve(__dirname,'src/styles/'),
-			'@icons': path.resolve(__dirname,'src/assets/icons/'),
-			'@logos': path.resolve(__dirname,'src/assets/logos/'),
-			'@pages': path.resolve(__dirname,'src/pages/'),
-		},
 	},
 	module: {
 		rules: [
@@ -39,13 +31,24 @@ module.exports = {
 				]
 			},
 			{
-				test: /\.(css|scss)$/,
-				use: [
-					"style-loader",
-					"css-loader",
-					"sass-loader",
-				],
-			},
+        test: /\.css$/,
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader, //loader que llega de este paquete
+          },
+          'css-loader',
+        ],
+      },
+			{
+        test: /\.scss$/,
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader, //loader que llega de este paquete
+          },
+          'css-loader',
+          'sass-loader',
+        ],
+      },
 			{
 				test:/\.(png|svg|jpg|gif)$/,
 				type:'asset'
@@ -54,12 +57,12 @@ module.exports = {
 	},
 	plugins: [
 		new HtmlWebpackPlugin({
-			template: './public/index.html',
-			filename: './index.html'
-		}),
-		new MiniCssExtractPlugin({
-			filename: '[name].css'
-		}),
+      template: './public/index.html',
+      filename: './index.html',
+    }),
+    new MiniCssExtractPlugin({
+      filename: 'assets/[name].css', //esto pone la regla, al compilar creara un carpeta llamada assets y dentro el css con el nombre por defecto alparecer
+    }),
 	],
 	devServer: {
 		historyApiFallback: true,

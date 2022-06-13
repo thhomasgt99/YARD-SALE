@@ -1,6 +1,6 @@
 import React from 'react';
-import '@styles/PasswordRecovery.scss';
-import logo_yard_sale from '@logos/logo_yard_sale.svg'
+import '../styles/PasswordRecovery.scss';
+import logo_yard_sale from '../assets/logos/logo_yard_sale.svg'
 
 
 const PasswordRecovery = () => {
