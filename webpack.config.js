@@ -76,6 +76,7 @@ module.exports = {
 	],
 	devServer: {
 		static: path.join(__dirname, 'dist'),
+		compress: true, //comprimir
 		historyApiFallback: true,
 		open: true,
 	}
