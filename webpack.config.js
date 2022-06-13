@@ -6,7 +6,7 @@ const CopyPlugin = require('copy-webpack-plugin');
 module.exports = {
 	entry: './src/index.js',
 	output: {
-		path: path.resolve(__dirname, 'build'),
+		path: path.resolve(__dirname, 'dist'),
 		filename: 'bundle.js',
     publicPath: './' //porque ruta arranca |esta linea deve pernanecer comentada en desarrollo local, pero en github debe subirse descomentada
 		//esto porque si esta activa tomo a dist para abrir y esto en local no es como lo devido en produccion SI
@@ -75,7 +75,7 @@ module.exports = {
     }),
 	],
 	devServer: {
-		static: path.join(__dirname, 'build'),
+		static: path.join(__dirname, 'dist'),
 		historyApiFallback: true,
 		open: true,
 	}
