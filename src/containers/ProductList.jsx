@@ -12,6 +12,7 @@ const ProductList = () => {
 
 	return (
 		<section className="main-container">
+			<h1>H1 DESDE PRODUCLIST</h1>
 			<div className="ProductList">
 				{products.map(product => (
 					<ProductItem product={product} key={product.id} />

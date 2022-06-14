@@ -12,6 +12,7 @@ const ProductItem = ({product}) => {
 
 	return (
 		<div className="ProductItem">
+			<h1>H1 DESDE PRODUCITEM</h1>
 			<img src={product.images[0]} alt={product.titles} />
 			<div className="product-info">
 				<div>
