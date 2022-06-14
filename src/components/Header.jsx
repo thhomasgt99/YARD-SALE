@@ -18,6 +18,7 @@ const Header = () => {
 
 	return (
 		<nav>
+			<h1>soy un check point</h1>
 			<img src={menu} alt="menu" className="menu" />
 			<div className="navbar-left">
 				<img src={logo} alt="logo" className="nav-logo" />
