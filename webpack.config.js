@@ -8,7 +8,7 @@ module.exports = {
 	output: {
 		path: path.resolve(__dirname, 'dist'),
 		filename: 'bundle.js',
-    publicPath: './' //porque ruta arranca |esta linea deve pernanecer comentada en desarrollo local, pero en github debe subirse descomentada
+    publicPath: '/' //porque ruta arranca |esta linea deve pernanecer comentada en desarrollo local, pero en github debe subirse descomentada
 		//esto porque si esta activa tomo a dist para abrir y esto en local no es como lo devido en produccion SI
 	},
 	resolve: {
