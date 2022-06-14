@@ -21,7 +21,7 @@ const App = () => {
 	return (
 		<AppContext.Provider value={initialState}>
 			<BrowserRouter>
-				<Layout></Layout>
+				<Layout>
 					<Routes>
 						<Route path="/" element={<Home  />} />
 						<Route path="/login" element={<Login />} />
@@ -34,7 +34,7 @@ const App = () => {
 						<Route path="/orders" element={<Orders />} />
 						<Route path="*" element={<NotFound />} />
 					</Routes>
-				
+				</Layout>
 			</BrowserRouter>
 		</AppContext.Provider>
 
